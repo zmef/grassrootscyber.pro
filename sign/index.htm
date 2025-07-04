@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grass Roots Cyber - Sign the Statement</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f9f9f9;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    header, main, footer {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    header {
+      background: #004d00;
+      color: white;
+    }
+    h1, h2 {
+      margin: 0 0 1rem;
+    }
+    .statement {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    .signatures {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+    button {
+      background: #008000;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #005f00;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Grass Roots Cyber</h1>
+    <p>Open, resilient, community-based cybersecurity.</p>
+  </header>
+  <main>
+    <h2>🌱 Statement of Organization</h2>
+    <div class="statement">
+      <p>This document outlines the grassroots governance and mission of Grass Roots Cyber. It is a living, evolving agreement open to all who support our principles. We welcome individuals and organizations to affirm their alignment by signing below.</p>
+      <p>View full document on <a href="https://github.com/zmef/grassrootscyber" target="_blank">GitHub</a>.</p>
+    </div>
+
+    <h2>✍️ Sign Here</h2>
+    <form action="#" method="POST" onsubmit="alert('Signature submitted. (This is a demo.)'); return false;">
+      <label for="name">Name or Organization:</label><br>
+      <input type="text" id="name" name="name" required style="width:100%; margin-bottom: 1rem; padding:0.5rem;"><br>
+
+      <label for="representation">Are you signing as an individual or on behalf of an organization?</label><br>
+      <select id="representation" name="representation" style="width:100%; margin-bottom: 1rem; padding:0.5rem;">
+        <option value="individual">Individual</option>
+        <option value="organization">Organization</option>
+      </select><br>
+
+      <label for="date">Date:</label><br>
+      <input type="date" id="date" name="date" required style="width:100%; margin-bottom: 1rem; padding:0.5rem;"><br>
+
+      <button type="submit">Add My Signature</button>
+    </form>
+
+    <div class="signatures">
+      <h3>📜 Signatures</h3>
+      <p><strong>Zach Fosdyck</strong>, Continuity Steward — 2025-07-04</p>
+      <!-- More signatures can be dynamically loaded here -->
+    </div>
+  </main>
+  <footer>
+    <p>Grass Roots Cyber is an unincorporated nonprofit association operating under UUNAA. This is a community-led initiative. ✨</p>
+  </footer>
+</body>
+</html>
