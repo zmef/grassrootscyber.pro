@@ -76,27 +76,31 @@
       <p>View full document on <a href="https://github.com/zmef/grassrootscyber" target="_blank">GitHub</a>.</p>
     </div>
 
-    <h2>✍️ Sign Here</h2>
-    <form action="#" method="POST" onsubmit="alert('Signature submitted. (This is a demo.)'); return false;">
-      <label for="name">Name or Organization:</label><br>
-      <input type="text" id="name" name="name" required style="width:100%; margin-bottom: 1rem; padding:0.5rem;"><br>
+    <h2>✍️ Want to sign the Statement? Click the button below to open a GitHub form where you can submit your signature. All entries are stored transparently in our public repository.</h2>
+    <div style="margin-bottom: 2rem;">
+  <a href="https://github.com/zmef/grassrootscyber/issues/new?template=sign-statement.yml" target="_blank">
+    <button>Sign via GitHub</button>
+  </a>
+  <p style="font-size: 0.9rem; color: #666;">
+    You'll be taken to GitHub to sign the Statement using your GitHub account. Your signature will be added automatically and published on this site.
+  </p>
+</div>
 
-      <label for="representation">Are you signing as an individual or on behalf of an organization?</label><br>
-      <select id="representation" name="representation" style="width:100%; margin-bottom: 1rem; padding:0.5rem;">
-        <option value="individual">Individual</option>
-        <option value="organization">Organization</option>
-      </select><br>
-
-      <label for="date">Date:</label><br>
-      <input type="date" id="date" name="date" required style="width:100%; margin-bottom: 1rem; padding:0.5rem;"><br>
-
-      <button type="submit">Add My Signature</button>
-    </form>
 
     <div class="signatures">
       <h3>📜 Signatures</h3>
       <p><strong>Zach Fosdyck</strong>, Continuity Steward — 2025-07-04</p>
-      <!-- More signatures can be dynamically loaded here -->
+      <script>
+fetch("https://raw.githubusercontent.com/zmef/grassrootscyber/main/signatures/signatures.json")
+  .then(res => res.json())
+  .then(data => {
+    const container = document.querySelector(".signatures");
+    data.forEach(sig => {
+      container.innerHTML += `<p><strong>${sig.name}</strong>, ${sig.type} — ${sig.date}</p>`;
+    });
+  });
+</script>
+
     </div>
   </main>
   <footer>
